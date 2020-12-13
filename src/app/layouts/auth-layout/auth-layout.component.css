@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap");
+
+.wrapper {
+  background: #fff;
+}
+
+.navbar {
+  background-image: linear-gradient(to right, #e1608b, #f1bd60);
+  box-shadow: 0px 2px 0px 0px #CCCCCC;
+}
+.navbar-inverse {
+  background: #fff;
+}
+.navbar-brand img {
+  width: 50px;
+  height: auto;
+}
+.navbar-brand .navbar-brand-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  display: inline-block;
+  color: #fff;
+  transform: translate(5px, 5px);
+}
+.navbar-brand .brandLogo-inverse {
+  color: #3d5170;
+}
+.btn {
+  background: #f5e8d7;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-box-shadow: 0px 0px 8px 3px rgba(170, 170, 170, 0.2);
+  box-shadow: 0px 0px 8px 3px rgba(170, 170, 170, 0.2);
+}
+.btn:hover {
+  text-decoration: underline;
+}
+.btn-inverse {
+  background-image: linear-gradient(to right, #e1608b, #f1bd60);
+  border: 1px solid #e1608b;
+}
+
+.section-landing .bg {
+  background-image: linear-gradient(to right, #e1608b, #f1bd60);
+  height: 70vh;
+}
+.section-landing .bg .blog-img {
+  background-image: url("/assets/images/sitting-reading.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  max-width: 400px;
+  height: 300px;
+}
+.section-landing .content {
+  width: 350px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section-landing .content .title-box,
+.section-landing .content .info-box {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.section-landing .content .info-box {
+  height: 30px;
+}
+.section-landing .content .title-box .block {
+  width: 0%;
+  height: 1px;
+  background-image: linear-gradient(to right, #e1608b, #f1bd60);
+  position: absolute;
+  animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  display: flex;
+}
+.section-landing .content .info-box .block {
+  width: 0%;
+  height: 1px;
+  background-image: linear-gradient(to right, #e1608b, #f1bd60);
+  position: absolute;
+  animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+  display: flex;
+}
+.section-landing .content .title-box h1 {
+  font-family: "Poppins";
+  color: #fff;
+  font-size: 3.6rem;
+  -webkit-animation: mainFadeIn 2s forwards;
+  -o-animation: mainFadeIn 2s forwards;
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+  position: relative;
+  margin: auto;
+}
+.section-landing .content .title-box h1 span {
+  width: 0px;
+  height: 0px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #4d88ca;
+  -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 2s;
+  margin-left: 5px;
+  margin-top: -10px;
+  position: absolute;
+  bottom: 13px;
+  right: -16px;
+}
+.section-landing .content .info-box p {
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 4s;
+  opacity: 0;
+  font-weight: 400;
+  font-family: "Lato";
+  color: #ffffff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: auto;
+}
+.section-landing .content .link .btn {
+  animation: fadeInBtn 1s forwards;
+  animation-delay: 4s;
+  opacity: 0;
+  position: relative;
+  bottom: -30px;
+}
+
+.section-landing .svg {
+  background-image: url("/assets/images/background-wave.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  margin-top: -200px;
+}
+
+@media only screen and (max-width: 992px) {
+  .section-landing .svg {
+    margin-top: -100px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section-landing .svg {
+    margin-top: -50px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .section-landing .svg {
+    margin-top: 0;
+  }
+}
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInBtn {
+  0% {
+    opacity: 0;
+    bottom: -30px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #4d88ca;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: #4d88ca;
+    opacity: 1;
+    bottom: 45px;
+  }
+  65% {
+    width: 7px;
+    height: 7px;
+    bottom: 0px;
+    width: 15px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    bottom: 20px;
+  }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: #4d88ca;
+    border: 0px solid #222;
+    bottom: 13px;
+  }
+}
+
+.section-info .container {
+  margin: 100px auto;
+}
+.section-info .content .section-head h1 {
+  font-family: "Poppins";
+  font-size: 3rem;
+  text-align: center;
+}
+.section-info .content .section-body .detail h2 {
+  font-family: "Poppins";
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+.section-info .content .section-body img {
+  max-width: 300px;
+  height: auto;
+}
+
+#bottom-bar {
+  background: #20232e;
+  color: #fff;
+  padding: 100px 0 85px;
+}
+#bottom-bar .module:first-child {
+  margin: 30px 10px 0 10px;
+}
+#bottom-bar .module .module-title {
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+#bottom-bar .module .module-content p,
+#bottom-bar .module .module-content a {
+  color: #959595;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+#bottom-bar .module .module-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#bottom-bar .module .module-content ul li a {
+  display: block;
+  text-decoration: none;
+}
+#bottom-bar .module .module-content ul li a:hover,
+#bottom-bar .module .module-content ul li a:active {
+  color: #fff;
+  transition: color 0.5s;
+  text-decoration: underline;
+}
+#bottom-bar .module .module-content ul li p {
+  line-height: 2;
+}
+#bottom-bar .module .module-content ul li span {
+  color: #fff;
+  padding-right: 8px;
+}
+#bottom-bar .module .module-content .subscription-form p {
+  font-size: 16px;
+}
+#bottom-bar .module .module-content .subscription-form p.email {
+  margin: 26px 0 26px;
+}
+#bottom-bar .module .module-content .subscription-form p.email input {
+  width: 100%;
+  background: #2b2e39 !important;
+  height: 53px;
+  border: none;
+  border-radius: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#bottom-bar .module .module-content .subscription-form p.email input:focus {
+  box-shadow: 0px 0px 10px 0px rgba(78, 237, 199, 1);
+  border: none;
+  outline: none;
+}
+#bottom-bar .module .module-content .subscription-form p.btn-subscribe button {
+  background: #36bfba;
+  border-radius: 3px;
+  padding: 5px 30px;
+}
+
+#footer {
+  background: #1b1d26;
+  color: #fff;
+  padding: 30px 0;
+}
+#footer .copyright {
+  color: #c2c2c2;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+#footer .copyright a {
+  text-decoration: none;
+  color: #fff;
+}
+#footer .copyright a:hover,
+.copyright a:focus,
+.copyright a:active {
+  color: #00bad1 !important;
+  transition: color 0.5s;
+}
+
+.section-signup-info .bg {
+  background-image: linear-gradient(to right, #e1608b, #f1bd60);
+  text-align: center;
+}
+.section-signup-info .bg h1 {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+.section-signup-info .bg p {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 1.6rem;
+  letter-spacing: 1.2px;
+}
+.section-signup-info .svg {
+  background-image: url("/assets/images/background-wave1.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+}
+
+.w-1 {
+  width: 32%;
+}
+.opacity-25 {
+  opacity: .25;
+}
+.h-1 {
+  height: .25rem;
+}
+.rounded-t {
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+

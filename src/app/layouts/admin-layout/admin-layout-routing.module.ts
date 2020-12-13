@@ -1,3 +1,4 @@
+import { AdminLayoutComponent } from './admin-layout.component';
 import { Routes } from '@angular/router';
 import { AddBlogComponent } from 'src/app/components/add-blog/add-blog.component';
 import { BlogPostsComponent } from 'src/app/components/blog-posts/blog-posts.component';
@@ -6,31 +7,47 @@ import { UserProfileComponent } from 'src/app/components/user-profile/user-profi
 
 export const AdminLayoutRoutes: Routes = [
   {
-    path: 'dashboard',
-    component: DashboardComponent,
-    data: {
-      title: 'Dashboard',
-    },
+    path: '',
+    component: AdminLayoutComponent,
+    children: [
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+        data: {
+          title: 'Dashboard',
+        },
+      },
+      {
+        path: 'add-blog',
+        component: AddBlogComponent,
+        data: {
+          title: 'AddBlog',
+        },
+      },
+      {
+        path: 'blog-posts',
+        component: BlogPostsComponent,
+        data: {
+          title: 'BlogPosts',
+        },
+      },
+      {
+        path: 'profile',
+        component: UserProfileComponent,
+        data: {
+          title: 'Profile',
+        },
+      },
+      {
+        path: '',
+        redirectTo: '/home/dashboard',
+        pathMatch: 'full',
+      },
+    ],
   },
   {
-    path: 'add-blog',
-    component: AddBlogComponent,
-    data: {
-      title: 'AddBlog',
-    },
-  },
-  {
-    path: 'blog-posts',
-    component: BlogPostsComponent,
-    data: {
-      title: 'BlogPosts',
-    },
-  },
-  {
-    path: 'profile',
-    component: UserProfileComponent,
-    data: {
-      title: 'Profile',
-    },
+    path: '',
+    redirectTo: '/home/dashboard',
+    pathMatch: 'full',
   },
 ];

@@ -10,6 +10,8 @@ import { HeaderNavigationComponent } from './shared/header-navigation/header-nav
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatIconModule } from '@angular/material/icon';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { MatIconModule } from '@angular/material/icon';
     AdminLayoutComponent,
     AuthLayoutComponent,
     SideBarComponent,
-    HeaderNavigationComponent
+    HeaderNavigationComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

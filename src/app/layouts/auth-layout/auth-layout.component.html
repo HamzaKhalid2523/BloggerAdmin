@@ -1,1 +1,215 @@
-<p>auth-layout works!</p>
+<div class="wrapper">
+  <nav class="navbar navbar-expand-md sticky-top" (scroll)="onWindowScroll($event);">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo.png" />
+        <h3 class="navbar-brand-text">BLOGVIO</h3>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="btn btn-lg" routerLink="/login"> Get Started </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="section section-landing">
+    <div class="bg pt-5 pb-5">
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="content">
+              <div class="title-box">
+                <span class="block"></span>
+                <h1>Blogvio<span></span></h1>
+              </div>
+              <div class="info-box mt-3">
+                <span class="block"></span>
+                <p>Create Stunning Blogs</p>
+              </div>
+              <div class="link mt-5">
+                <button class="btn btn-lg" routerLink="/login">Get Started</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="blog-img"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="svg"></div>
+  </div>
+
+  <div class="section section-info">
+    <div class="container py-5">
+      <div class="content">
+        <div class="section-head mb-5">
+          <h1>Why Blogvio?</h1>
+        </div>
+        <span class="section-body">
+          <div class="row mb-5">
+            <div
+              class="col-10 offset-1 col-md-5 offset-md-1 col-lg-4 offset-lg-2 d-flex align-items-center"
+            >
+              <div class="detail">
+                <h2>So much cleaner UI</h2>
+                <p>
+                  Blogvio is very clean on the eye with only things that you
+                  really need.
+                </p>
+              </div>
+            </div>
+            <div class="col-10 offset-1 col-md-5 col-lg-4">
+              <img src="assets/images/clean-ui.png" alt="" />
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div
+              class="col-10 offset-1 col-md-5 ol-lg-4 order-md-2 d-flex align-items-center"
+            >
+              <div class="detail">
+                <h2>Privacy first.</h2>
+                <p>
+                  No data of your will be used for any purpose. We value privacy
+                  greatly and therefore you will not be visible to the rest of
+                  the world unless you say so.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-10 offset-1 col-md-5 offset-md-1 col-lg-4 offset-lg-2 order-md-1"
+            >
+              <img src="assets/images/security.png" alt="" />
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div
+              class="col-10 offset-1 col-md-5 offset-md-1 col-lg-4 offset-lg-2 d-flex align-items-center"
+            >
+              <div class="detail">
+                <h2>Built-in Analytics</h2>
+                <p>
+                  Keep tracks of books you're reading and get statistical charts
+                  and analysis of your reading habits
+                </p>
+              </div>
+            </div>
+            <div class="col-10 offset-1 col-md-5 col-lg-4">
+              <img src="assets/images/analytics.png" alt="" />
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-signup-info">
+    <div class="svg"></div>
+    <div class="bg py-5">
+      <div class="container">
+        <div class="content">
+          <div class="title">
+            <h1>Signup on Booky!</h1>
+          </div>
+          <div class=" mt-3">
+            <div class="h-1 mx-auto bg-white w-1 opacity-25 rounded-t"></div>
+          </div>
+          <div class="info-box mt-4">
+            <p>Booky is free and always will be.</p>
+          </div>
+          <div class="link mt-5">
+            <button class="btn btn-lg" routerLink="/login">Lets Start</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="bottom-bar">
+    <div class="container">
+      <div class="row">
+        <div id="bottom-1" class="col-sm-6 col-lg-3">
+          <div class="module">
+            <h4 class="module-title">Connect with us</h4>
+            <div class="module-content">
+              <p>Rawalpindi, Pakistan</p>
+              <ul>
+                <li>
+                  <p>
+                    <span class="fa fa-phone"></span>
+                    +92 348-5068163
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <span class="fa fa-fax"></span>
+                    +92 315-0148406
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <span class="fa fa-envelope"></span>
+                    hamzakhalid.zx@gmail.com
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="bottom-1" class="col-sm-6 col-lg-3">
+          <div class="module">
+            <h4 class="module-title">Work with us</h4>
+            <div class="module-content">
+              <ul>
+                <li>
+                  <a href="#">Official Blog</a>
+                </li>
+                <li>
+                  <a href="#">Github</a>
+                </li>
+                <li>
+                  <a href="#">About Me</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="bottom-3" class="col-lg-6">
+          <div class="module">
+            <h4 class="module-title">Newsletter</h4>
+            <div class="module-content">
+              <form class="subscription-form" action="">
+                <p>Enter your email and we'll send you more information</p>
+                <p class="input-control email">
+                  <span>
+                    <input type="email" placeholder="Your Email..." />
+                  </span>
+                </p>
+                <p class="input-control btn-subscribe">
+                  <button class="btn btn-primary py-3">Subscribe</button>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-12">
+          <span class="copyright">
+            &#169;copy Copyright -
+            <a class="text-white" href="#">Blogvio / Blogs</a>
+            2020.
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
