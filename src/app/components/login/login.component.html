@@ -1,46 +1,80 @@
 <div class="wrapper">
   <div class="row">
     <div class="col-12 col-md-6">
-      <div class="container">
-        <div class="content px-5">
-          <div class="title">
-            <h1>Welcome to Blogvio.</h1>
-          </div>
-          <div class="mt-1" style="width: 100%;">
-            <div class="h-1 mx-auto w-1 opacity-25 rounded-t"></div>
-          </div>
-          <ul class="list-group list-group-flush mt-5">
-            <li class="list-group-item p-4">
-              <div class="row">
-                <div class="col">
-                  <form>
-                    <div class="form-row">
-                      <div class="form-group col-md-12">
-                        <label for="email">Email</label>
-                        <input type="text" class="form-control mt-2" id="email" placeholder="your@email.com">
-                      </div>
-                      <div class="form-group col-md-12">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control mt-2" id="password" placeholder="Password">
-                      </div>
+      <div class="content px-5">
+        <div class="title">
+          <h1>Welcome to Blogvio.</h1>
+        </div>
+        <div class="mt-1" style="width: 100%">
+          <div class="h-1 mx-auto w-1 opacity-25 rounded-t"></div>
+        </div>
+        <ul class="list-group list-group-flush mt-5">
+          <li class="list-group-item p-4">
+            <div class="row">
+              <div class="col">
+                <form [formGroup]="loginForm">
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="email">Email</label>
+                      <input
+                        type="text"
+                        id="email"
+                        class="form-control mt-2"
+                        placeholder="your@email.com"
+                        formControlName="email"
+                        [class.invalid-input]="loginForm.get('email').dirty && loginForm.get('email').invalid"
+                      />
                     </div>
-                    <div class="submit-btn mt-3">
-                      <a type="submit" routerLink="/home" class="btn btn-lg btn-block btn-dark">Log In</a>
+                    <div class="form-group col-md-12">
+                      <label for="password">Password</label>
+                      <input
+                        type="password"
+                        id="password"
+                        class="form-control mt-2"
+                        placeholder="Password"
+                        formControlName="password"
+                        [class.invalid-input]="loginForm.get('password').dirty && loginForm.get('password').invalid"
+                      />
                     </div>
-                  </form>
-                  <div class="link-info mt-5">
-                    <p>Don't have an account? <a routerLink="/signup">Register here.</a></p>
                   </div>
+                  <div class="submit-btn mt-3">
+                    <a
+                      type="submit"
+                      (click)="submitForm()"
+                      class="btn btn-lg btn-block btn-dark"
+                      >
+                        <span *ngIf="!loadingSpinner">Log In</span>
+                        <span
+                          *ngIf="loadingSpinner"
+                          class="spinner-border spinner-border-sm"
+                          aria-hidden="true"
+                          role="status"
+                        >
+                        </span>
+                      </a
+                    >
+                  </div>
+                </form>
+                <div class="link-info mt-5">
+                  <p>
+                    Don't have an account?
+                    <a routerLink="/signup">Register here.</a>
+                  </p>
                 </div>
               </div>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 d-none d-md-block">
       <div class="info-img">
-        <img src="assets/images/login-bg-5.jpg" alt="">
+        <div class="back-icon" (click)="goBackPage()">
+          <span class="icon fa fa-arrow-left"></span>
+        </div>
+        <div class="img">
+          <img src="assets/images/login-bg-5.jpg" alt="" />
+        </div>
       </div>
     </div>
   </div>

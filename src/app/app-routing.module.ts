@@ -4,22 +4,28 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import { RedirectLoginGuard } from './services/guards/redirectlogin.guard';
+import { IsLoginGuard } from './services/guards/islogin.guard';
 
 const routes: Routes = [
   {
     path: "",
+    canActivate: [RedirectLoginGuard],
     component: AuthLayoutComponent
   },
   {
     path: "home",
+    canActivate: [IsLoginGuard],
     loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
   },
   {
     path: "login",
+    canActivate: [RedirectLoginGuard],
     component: LoginComponent
   },
   {
     path: "signup",
+    canActivate: [RedirectLoginGuard],
     component: SignupComponent
   },
 ];
